@@ -9,7 +9,7 @@ import {
 import { Footer, Navbar } from "./components";
 
 function Layout() {
-  const user = true;
+  const user = false;
   const location = useLocation()
 
   return user ? (<Outlet />
@@ -18,9 +18,11 @@ function Layout() {
   );
 }
 function App() {
+  const user ={};
   return (
-    <Main>
+    <Main className = "bg-[#f7fdfd]">
       <Navbar />
+      
       <Routes>
         <Route element={<Layout />}>
           <Route
@@ -47,7 +49,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/user-auth" element={<AuthPage />} />
       </Routes>
-      {user && <Footer />}
+     {user && <Footer />}
     </Main>
   );
 }
