@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const UploadJob = () => {
-    return (
-        <div>UploadJob</div>
-    )
+  return <div>UploadJob</div>;
 };
 
 export default UploadJob;
